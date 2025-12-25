@@ -3,3 +3,75 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('./fonts/Figtree/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('./fonts/Figtree/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Figtree', sans-serif;
+}
+
+h1 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    background-color: #06171E;
+}
+
+/* header */
+header {
+    background-color: #09212A;
+    width: 100%;
+    padding: 18px;
+}
+/* section album */
+.photo-album{
+    margin-top: 100px;
+}
+.photo-album img{
+    width: 150px;
+    height: 150px;
+}
+.photo-album h1{
+    margin-bottom: 100px;
+}
+/* contentlimitation */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+/* footer */
+
+footer {
+    background-color: #09212A;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
