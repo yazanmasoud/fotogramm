@@ -37,6 +37,7 @@ h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     text-align: center;
+    font-size: 56px;
 }
 
 main {
@@ -50,28 +51,55 @@ header {
     width: 100%;
     padding: 18px;
 }
-/* section album */
-.photo-album{
-    margin-top: 100px;
+
+.logo-img {
+    width: 250px;
+    height: 50px;
 }
-.photo-album img{
+
+/* section album */
+.photo-album {
+    margin-top: 100px;
+
+}
+
+.photos-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.photo-album img {
     width: 150px;
     height: 150px;
+    margin: 20px;
 }
-.photo-album h1{
+
+.photo-album h1 {
     margin-bottom: 100px;
 }
+
 /* contentlimitation */
-.container {
+.content-wrapper {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 1rem;
 }
+
 /* footer */
 
-footer {
-    background-color: #09212A;
+.site-footer {
+    background-image: url(./assets/img/Subtract.png);
+    background-color: #06171E;
+    min-height: 100px;
+    background-size: cover;
     width: 100%;
-    text-align: center;
-    padding: 20px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 }
