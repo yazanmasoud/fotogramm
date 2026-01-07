@@ -46,7 +46,7 @@ main {
 }
 
 /* header */
-header {
+.header-main {
     background-color: #09212A;
     width: 100%;
     padding: 18px;
@@ -70,15 +70,67 @@ header {
 
 }
 
-.photo-album img {
-    width: 150px;
-    height: 150px;
-    margin: 20px;
-}
+
 
 .photo-album h1 {
     margin-bottom: 100px;
 }
+
+.photo-album-img {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.photo-album-img:hover {
+    transform: scale(1.05) rotate(1.5deg) translateX(6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* dialog */
+.header-dialog {
+    background-color: #06171E;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+
+}
+
+.dialog-backgroung {
+    background-color: #06171E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-img {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.dialog-image {
+    width: 350px;
+    height: 350px;
+    padding: 20px;
+}
+
+.dialog-album {
+    border: none;
+    padding: 0;
+    border-radius: 16px;
+    width: 600px;
+    height: 600px;
+}
+dialog[open] {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
 
 /* contentlimitation */
 .content-wrapper {
@@ -86,6 +138,15 @@ header {
     margin: 0 auto;
     padding: 0 1rem;
 }
+.dialog-footer {
+    background-color: #06171E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
 
 /* footer */
 
