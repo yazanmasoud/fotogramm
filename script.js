@@ -9,28 +9,44 @@ const images = [
     "./assets/img/Property 1=snow-bunting-6781122_1280.jpg.png",
     "./assets/img/Property 1=snow-leopard-cubs-8039138_1280.jpg.png",
     "./assets/img/Property 1=travel-8785493_1280.jpg.png",
-    "./assets/img/Property 1=winter-1675197_1280.jpg.png"
+    "./assets/img/Property 1=winter-1675197_1280.jpg.png",
+
 ];
-
-
-let currentIndex = 0;
 
 const album = document.getElementById("photoAlbum");
 
-for (let i = 0; i < images.length; i++) {
+   for (let i = 0; i < images.length; i++) {
     const img = document.createElement("img");
+
     img.src = images[i];
     img.className = "photo-album-img";
-
-    img.onclick = function () {
+     img.onclick = function () {
         openDialog(i);
     };
 
     album.appendChild(img);
 }
+
+
+
+let currentIndex = 0;
 function openDialog(index) {
-    currentIndex = index;
-    document.getElementById("dialogImage").src = images[currentIndex];
-    document.getElementById("imgDialog").showModal();
+    currentIndex = 0;
+
+    const dialog = document.getElementById("dialogAlbum");
+    const dialogImage = document.getElementById("dialogImage");
+
+    dialogImage.src = images[index];
+    dialog.showModal();
 }
+function closeDialog() {
+    document.getElementById("dialogAlbum").close();
+}
+function rendDialog(index) {
+
+
+}
+
+
+
 

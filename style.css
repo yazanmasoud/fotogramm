@@ -44,35 +44,50 @@ main {
     flex: 1;
     background-color: #06171E;
 }
+button{
+    text-rendering: none;
+    letter-spacing: none;
+    word-spacing: none;
+    line-height: none;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: center;
+    cursor: default;
+}
 
 /* header */
-.header-main {
+.HeaderMain {
     background-color: #09212A;
     width: 100%;
     padding: 18px;
 }
 
-.logo-img {
+.HeaderLogo {
     width: 250px;
     height: 50px;
 }
 
+.HeaderInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* section album */
-.photo-album {
+.PhotosAlbum {
     margin-top: 100px;
 
 }
 
-.photos-box {
+.PhotosBox {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
 }
 
-
-
-.photo-album h1 {
+.PhotosAlbum h1 {
     margin-bottom: 100px;
 }
 
@@ -90,67 +105,54 @@ main {
 }
 
 /* dialog */
-.header-dialog {
-    background-color: #06171E;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-
-}
-
-.dialog-backgroung {
-    background-color: #06171E;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.close-img {
+.DialogCloseIcon {
     display: flex;
     width: 20px;
     height: 20px;
     cursor: pointer;
 }
 
-.dialog-image {
-    width: 350px;
-    height: 350px;
+.DialogMainImage {
+    width: 500px;
+    height: 500px;
     padding: 20px;
 }
 
-.dialog-album {
+.DialogAlbum {
+    background-color: #06171E;
     border: none;
     padding: 0;
     border-radius: 16px;
     width: 600px;
     height: 600px;
-}
-dialog[open] {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
+    margin: auto;
 
+}
+.DialogAlbum main,footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+              
+}
+.DialogHeader{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.DialogFooter{
+    gap: 20px;
+              
+}
 
 /* contentlimitation */
-.content-wrapper {
+.ContentWrapper {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 1rem;
 }
-.dialog-footer {
-    background-color: #06171E;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 10px;
-}
-
 
 /* footer */
-
-.site-footer {
+.SiteFooter {
     background-image: url(./assets/img/Subtract.png);
     background-color: #06171E;
     min-height: 100px;
@@ -158,7 +160,7 @@ dialog[open] {
     width: 100%;
 }
 
-.footer-inner {
+.FooterInner {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -8,30 +8,55 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+<!-- names: Dateinamen in kebab-case : user-utils.js
+Funktionen im camelCase function getUser() {...};
+Klassen in PascalCase class UserProfile {};
+Konstanten in UPPER_CASE const MAX_RETRIES = 3;
+ -->
 
 <body>
-    <header class="header-main">
-        <div class="header-inner content-wrapper">
-            <img class="logo-img" src="./assets/img/Capa_1.png" alt="">
+    <header class="HeaderMain">
+        <div class="HeaderInner ContentWrapper">
+            <img class="HeaderLogo" src="./assets/img/Capa_1.png" alt="Fotogramm Logo">
         </div>
 
     </header>
     <main>
 
-        <section class="photo-album">
-            <div class="content-wrapper">
+        <section class="PhotosAlbum">
+            <div class="ContentWrapper">
                 <h1>Your personal photo album</h1>
             </div>
-            <!-- hier -->
 
-            <div class="photos-box content-wrapper" id="photoAlbum"></div>
+            <div class="PhotosBox ContentWrapper" id="photoAlbum">
+
+            </div>
             
 
-    </main>
-    <footer class="site-footer">
-        <div class="footer-inner content-wrapper">
-            <img src="./assets/img/Frame 6.png" alt="">
+            <dialog class="DialogAlbum" id="dialogAlbum">
+                <header class="DialogHeader">
+                    <img class="DialogCloseIcon" onclick="closeDialog()" src="./assets/img/Close icon.png" alt="">
+                </header>
+                <main>
+                    <img class="DialogMainImage" id="dialogImage" />
+                </main>
+                <footer class="DialogFooter">
+                    <button>
+                        <img src="./assets/img/Button.png" alt="">
+                    </button>
+                    <button>
+                        <img src="./assets/img/Property 1=Default.png" alt="">
+                    </button>
 
+                </footer>
+
+            </dialog>
+
+
+    </main>
+    <footer class="SiteFooter">
+        <div class="FooterInner ContentWrapper">
+            <img src="./assets/img/Frame 6.png" alt="Develeper Akademie footer logo">
         </div>
     </footer>
 </body>
