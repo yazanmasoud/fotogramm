@@ -33,12 +33,12 @@ Konstanten in UPPER_CASE const MAX_RETRIES = 3;
             <div class="PhotosBox ContentWrapper" id="photoAlbum"></div>
      
             <dialog  class="DialogAlbum" id="dialogAlbum" onclick="if(event.target === this) this.close()" onkeydown="
-            if(event.key==='ArrowRight'){ showNextImage(); } 
+            if(event.key==='ArrowRight'){ showNextImage();} 
             else if(event.key==='ArrowLeft'){ showPrevImage(); } ">
 
                 <header class="DialogHeader">
                     <h2 class="CurrentImageNumber" id="dialogTitel">hi</h2>
-                    <img tabindex="0" class="DialogCloseIcon" onclick="closeDialog()" src="./assets/img/Close icon.png"  alt="close icon">
+                    <img tabindex="0" class="DialogCloseIcon" onclick="closeDialog()" onkeydown="if(event.key === 'Enter'){closeDialog();}" src="./assets/img/Close icon.png"  alt="close icon">
                 </header>
 
                 <main>
@@ -46,11 +46,11 @@ Konstanten in UPPER_CASE const MAX_RETRIES = 3;
                 </main>
 
                 <footer class="DialogFooter">
-                    <img tabindex="0" class="NavigationBarImage"  onclick="showPrevImage()" src="./assets/img/Button.png" alt="navigation to the left">
+                    <img tabindex="0" class="NavigationBarImage"  onclick="showPrevImage()" onkeydown="if(event.key === 'Enter'){showPrevImage();}" src="./assets/img/Button.png" alt="navigation to the left">
 
                     <p class="CurrentImageNumber" id="currentImageNumber"></p>
 
-                    <img tabindex="0" class="NavigationBarImage" onclick="showNextImage()" src="./assets/img/Property 1=Default.png" alt="navigation to the right">
+                    <img tabindex="0" class="NavigationBarImage" onclick="showNextImage()" onkeydown="if(event.key === 'Enter'){showNextImage();}" src="./assets/img/Property 1=Default.png" alt="navigation to the right">
                 </footer>
 
             </dialog>
