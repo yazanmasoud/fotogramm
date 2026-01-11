@@ -17,8 +17,7 @@ const albumContainer = document.getElementById("photoAlbum");
 function rendPhotos(i) {
     for (let i = 0; i < images.length; i++) {
         const image = images[i];
-        albumContainer.innerHTML += `
-    <img class="PhotoAlbumImage" src="${image}" tabindex="0" role="button" onclick="openDialog(${i}) "onkeydown="if(event.key==='Enter'){openDialog(${i})}">`;
+        albumContainer.innerHTML += `<img class="PhotoAlbumImage" src="${image}" tabindex="0" role="button" onclick="openDialog(${i})" onkeydown="if(event.key==='Enter'){openDialog(${i})}">`;
     }
 }
 
@@ -51,6 +50,7 @@ function showPrevImage() {
     updateDialogImage()
     updateDialogTitel()
 }
+
 
 /* this function shows the number of the photo in the dialog */
 function updateDialogImage() {

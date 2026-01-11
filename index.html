@@ -32,7 +32,9 @@ Konstanten in UPPER_CASE const MAX_RETRIES = 3;
 
             <div class="PhotosBox ContentWrapper" id="photoAlbum"></div>
      
-            <dialog class="DialogAlbum" id="dialogAlbum">
+            <dialog  class="DialogAlbum" id="dialogAlbum" onclick="if(event.target === this) this.close()" onkeydown="
+            if(event.key==='ArrowRight'){ showNextImage(); } 
+            else if(event.key==='ArrowLeft'){ showPrevImage(); } ">
 
                 <header class="DialogHeader">
                     <h2 class="CurrentImageNumber" id="dialogTitel">hi</h2>
@@ -44,12 +46,11 @@ Konstanten in UPPER_CASE const MAX_RETRIES = 3;
                 </main>
 
                 <footer class="DialogFooter">
-                    <img class="NavigationBarImage" onclick="showPrevImage()" src="./assets/img/Button.png" alt="navigation to the left">
+                    <img class="NavigationBarImage"  onclick="showPrevImage()" src="./assets/img/Button.png" alt="navigation to the left">
 
                     <p class="CurrentImageNumber" id="currentImageNumber"></p>
 
-                    <img class="NavigationBarImage" onclick="showNextImage()" src="./assets/img/Property 1=Default.png"
-                        alt="navigation to the right">
+                    <img class="NavigationBarImage" onclick="showNextImage()" src="./assets/img/Property 1=Default.png" alt="navigation to the right">
                 </footer>
 
             </dialog>
