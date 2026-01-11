@@ -38,7 +38,7 @@ Konstanten in UPPER_CASE const MAX_RETRIES = 3;
 
                 <header class="DialogHeader">
                     <h2 class="CurrentImageNumber" id="dialogTitel">hi</h2>
-                    <img class="DialogCloseIcon" onclick="closeDialog()" src="./assets/img/Close icon.png" alt="">
+                    <img tabindex="0" class="DialogCloseIcon" onclick="closeDialog()" src="./assets/img/Close icon.png"  alt="close icon">
                 </header>
 
                 <main>
@@ -46,11 +46,11 @@ Konstanten in UPPER_CASE const MAX_RETRIES = 3;
                 </main>
 
                 <footer class="DialogFooter">
-                    <img class="NavigationBarImage"  onclick="showPrevImage()" src="./assets/img/Button.png" alt="navigation to the left">
+                    <img tabindex="0" class="NavigationBarImage"  onclick="showPrevImage()" src="./assets/img/Button.png" alt="navigation to the left">
 
                     <p class="CurrentImageNumber" id="currentImageNumber"></p>
 
-                    <img class="NavigationBarImage" onclick="showNextImage()" src="./assets/img/Property 1=Default.png" alt="navigation to the right">
+                    <img tabindex="0" class="NavigationBarImage" onclick="showNextImage()" src="./assets/img/Property 1=Default.png" alt="navigation to the right">
                 </footer>
 
             </dialog>
