@@ -32,7 +32,7 @@ Konstanten in UPPER_CASE const MAX_RETRIES = 3;
 
             <div class="PhotosBox ContentWrapper" id="photoAlbum"></div>
      
-            <dialog  class="DialogAlbum" id="dialogAlbum" onclick="if(event.target === this) this.close()" onkeydown="
+            <dialog tabindex="0"  class="DialogAlbum" id="dialogAlbum" onclick="if(event.target === this) this.close()" onkeydown="
             if(event.key==='ArrowRight'){ showNextImage();} 
             else if(event.key==='ArrowLeft'){ showPrevImage(); } ">
 
