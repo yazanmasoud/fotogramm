@@ -28,6 +28,7 @@ function openDialog(index) {
     const dialog = document.getElementById("dialogAlbum");
     const dialogImage = document.getElementById("dialogImage");
     updateDialogImage();
+    updateDialogTitel()
     dialog.showModal();
 }
 
@@ -40,12 +41,14 @@ function showNextImage() {
     currentIndex = (currentIndex +1)% images.length;
     dialogImage.src = images[currentIndex];
     updateDialogImage()
+    updateDialogTitel()
 }
 
 function showPrevImage() {
     currentIndex = (currentIndex -1 + images.length)% images.length;
     dialogImage.src = images[currentIndex];
     updateDialogImage()
+    updateDialogTitel()
 }
 
 /* this function shows the number of the photo in the dialog */
@@ -55,6 +58,14 @@ function updateDialogImage() {
 
     dialogImage.src = images[currentIndex];
     counter.innerHTML = `${currentIndex + 1} / ${images.length}`;
+}
+function updateDialogTitel() {
+    const imagePath = images[currentIndex];
+    const fileName = imagePath.split("/").pop();
+    const titel = fileName.split(".")[0]; /* this is to switch the string to array and gives the first element back */
+    const dialogTitel = document.getElementById('dialogTitel');
+    dialogTitel.innerText = titel;
+    
 }
 
 
