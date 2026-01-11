@@ -7,6 +7,7 @@
     <title>Fotogramm</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="icon" href="./assets/icons/favicon.png">
 </head>
 <!-- names: Dateinamen in kebab-case : user-utils.js
 Funktionen im camelCase function getUser() {...};
@@ -21,6 +22,7 @@ Konstanten in UPPER_CASE const MAX_RETRIES = 3;
         </div>
 
     </header>
+
     <main>
 
         <section class="PhotosAlbum">
@@ -28,33 +30,31 @@ Konstanten in UPPER_CASE const MAX_RETRIES = 3;
                 <h1>Your personal photo album</h1>
             </div>
 
-            <div class="PhotosBox ContentWrapper" id="photoAlbum">
-
-            </div>
-            
-
+            <div class="PhotosBox ContentWrapper" id="photoAlbum"></div>
+     
             <dialog class="DialogAlbum" id="dialogAlbum">
+
                 <header class="DialogHeader">
                     <img class="DialogCloseIcon" onclick="closeDialog()" src="./assets/img/Close icon.png" alt="">
                 </header>
+
                 <main>
                     <img class="DialogMainImage" id="dialogImage" />
                 </main>
-                <footer class="DialogFooter">
-                    <button onclick="showPrevImage()">
-                        <img  src="./assets/img/Button.png" alt="navigation to the left">
-                    </button>
-                    <p class="CurrentImageNumber" id="currentImageNumber"></p>
-                    <button>
-                        <img onclick="showNextImage()" src="./assets/img/Property 1=Default.png" alt="navigation to the right">
-                    </button>
 
+                <footer class="DialogFooter">
+                    <img class="NavigationBarImage" onclick="showPrevImage()" src="./assets/img/Button.png" alt="navigation to the left">
+
+                    <p class="CurrentImageNumber" id="currentImageNumber"></p>
+
+                    <img class="NavigationBarImage" onclick="showNextImage()" src="./assets/img/Property 1=Default.png"
+                        alt="navigation to the right">
                 </footer>
 
             </dialog>
 
-
     </main>
+
     <footer class="SiteFooter">
         <div class="FooterInner ContentWrapper">
             <img src="./assets/img/Frame 6.png" alt="Develeper Akademie footer logo">

@@ -13,30 +13,28 @@ const images = [
 
 ];
 
-const album = document.getElementById("photoAlbum");
+const albumContainer = document.getElementById("photoAlbum");
 function rendPhotos(i) {
      for (let i = 0; i < images.length; i++) {
     const image = images[i];
-    album.innerHTML += `<img class="PhotoAlbumImage" src="${image}" onclick="openDialog(${i})">`;
-        currentImageNumber.innerHTML = `${currentIndex+1} / ${images.length}`
+    albumContainer.innerHTML += `<img class="PhotoAlbumImage" src="${image}" onclick="openDialog(${i})">`;
    }
 }
   
-
-
 let currentIndex = 0;
+
 function openDialog(index) {
-    
     currentIndex = index;
     const dialog = document.getElementById("dialogAlbum");
     const dialogImage = document.getElementById("dialogImage");
-    dialogImage.src = images[currentIndex];
+    updateDialogImage();
     dialog.showModal();
 }
 
 function closeDialog() {
     document.getElementById("dialogAlbum").close();
 }
+
 
 function showNextImage() {
     currentIndex = (currentIndex +1)% images.length;
@@ -49,6 +47,7 @@ function showPrevImage() {
     dialogImage.src = images[currentIndex];
     updateDialogImage()
 }
+
 /* this function shows the number of the photo in the dialog */
 function updateDialogImage() {
     const dialogImage = document.getElementById("dialogImage");
