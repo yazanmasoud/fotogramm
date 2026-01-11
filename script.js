@@ -9,18 +9,19 @@ const images = [
     "./assets/img/dog8.jpg",
     "./assets/img/dog9.jpg",
     "./assets/img/dog10.jpg"
-    
+
 
 ];
 
 const albumContainer = document.getElementById("photoAlbum");
 function rendPhotos(i) {
-     for (let i = 0; i < images.length; i++) {
-    const image = images[i];
-    albumContainer.innerHTML += `<img class="PhotoAlbumImage" src="${image}" onclick="openDialog(${i})">`;
-   }
+    for (let i = 0; i < images.length; i++) {
+        const image = images[i];
+        albumContainer.innerHTML += `
+    <img class="PhotoAlbumImage" src="${image}" tabindex="0" role="button" onclick="openDialog(${i}) "onkeydown="if(event.key==='Enter'){openDialog(${i})}">`;
+    }
 }
-  
+
 let currentIndex = 0;
 
 function openDialog(index) {
@@ -38,14 +39,14 @@ function closeDialog() {
 
 
 function showNextImage() {
-    currentIndex = (currentIndex +1)% images.length;
+    currentIndex = (currentIndex + 1) % images.length;
     dialogImage.src = images[currentIndex];
     updateDialogImage()
     updateDialogTitel()
 }
 
 function showPrevImage() {
-    currentIndex = (currentIndex -1 + images.length)% images.length;
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
     dialogImage.src = images[currentIndex];
     updateDialogImage()
     updateDialogTitel()
@@ -65,7 +66,7 @@ function updateDialogTitel() {
     const titel = fileName.split(".")[0]; /* this is to switch the string to array and gives the first element back */
     const dialogTitel = document.getElementById('dialogTitel');
     dialogTitel.innerText = titel;
-    
+
 }
 
 
