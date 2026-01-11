@@ -1,14 +1,14 @@
 const images = [
-    "./assets/img/dog1.jpg",
-    "./assets/img/dog2.jpg",
-    "./assets/img/dog3.jpg",
-    "./assets/img/dog4.jpg",
-    "./assets/img/dog5.jpg",
-    "./assets/img/dog6.jpg",
-    "./assets/img/dog7.jpg",
-    "./assets/img/dog8.jpg",
-    "./assets/img/dog9.jpg",
-    "./assets/img/dog10.jpg"
+    "./assets/img/Shiba_Inu.jpg",
+    "./assets/img/Border_Collie_Mix.jpg",
+    "./assets/img/Cockapoo.jpg",
+    "./assets/img/Dackel_Black_Red.jpg",
+    "./assets/img/Dackel_Short_Hair.jpg",
+    "./assets/img/Dackel.jpg",
+    "./assets/img/Dackel2.jpg",
+    "./assets/img/Golden_Retriever.jpg",
+    "./assets/img/Labrador_Retriever.jpg",
+    "./assets/img/Mischling.jpg"
 
 
 ];
