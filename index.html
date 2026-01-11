@@ -14,7 +14,7 @@ Klassen in PascalCase class UserProfile {};
 Konstanten in UPPER_CASE const MAX_RETRIES = 3;
  -->
 
-<body>
+<body onload="rendPhotos()">
     <header class="HeaderMain">
         <div class="HeaderInner ContentWrapper">
             <img class="HeaderLogo" src="./assets/img/Capa_1.png" alt="Fotogramm Logo">
@@ -41,11 +41,12 @@ Konstanten in UPPER_CASE const MAX_RETRIES = 3;
                     <img class="DialogMainImage" id="dialogImage" />
                 </main>
                 <footer class="DialogFooter">
-                    <button>
-                        <img src="./assets/img/Button.png" alt="">
+                    <button onclick="showPrevImage()">
+                        <img  src="./assets/img/Button.png" alt="navigation to the left">
                     </button>
+                    <p class="CurrentImageNumber" id="currentImageNumber"></p>
                     <button>
-                        <img src="./assets/img/Property 1=Default.png" alt="">
+                        <img onclick="showNextImage()" src="./assets/img/Property 1=Default.png" alt="navigation to the right">
                     </button>
 
                 </footer>

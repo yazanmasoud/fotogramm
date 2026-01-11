@@ -1,51 +1,63 @@
 const images = [
-    "./assets/img/Property 1=alaska-810433_1280.jpg.png",
-    "./assets/img/Property 1=anime-8788959_1280.jpg.png",
-    "./assets/img/Property 1=atmosphere-8752835_1280.png.png",
-    "./assets/img/Property 1=blue-tit-8521052_1280.jpg.png",
-    "./assets/img/Property 1=hurricane-92968_1280.jpg.png",
-    "./assets/img/Property 1=lake-2896379_1280.jpg.png",
-    "./assets/img/Property 1=sea-2563389_1280.jpg.png",
-    "./assets/img/Property 1=snow-bunting-6781122_1280.jpg.png",
-    "./assets/img/Property 1=snow-leopard-cubs-8039138_1280.jpg.png",
-    "./assets/img/Property 1=travel-8785493_1280.jpg.png",
-    "./assets/img/Property 1=winter-1675197_1280.jpg.png",
+    "./assets/img/dog1.jpg",
+    "./assets/img/dog2.jpg",
+    "./assets/img/dog3.jpg",
+    "./assets/img/dog4.jpg",
+    "./assets/img/dog5.jpg",
+    "./assets/img/dog6.jpg",
+    "./assets/img/dog7.jpg",
+    "./assets/img/dog8.jpg",
+    "./assets/img/dog9.jpg",
+    "./assets/img/dog10.jpg"
+    
 
 ];
 
 const album = document.getElementById("photoAlbum");
-
-   for (let i = 0; i < images.length; i++) {
-    const img = document.createElement("img");
-
-    img.src = images[i];
-    img.className = "photo-album-img";
-     img.onclick = function () {
-        openDialog(i);
-    };
-
-    album.appendChild(img);
+function rendPhotos(i) {
+     for (let i = 0; i < images.length; i++) {
+    const image = images[i];
+    album.innerHTML += `<img class="PhotoAlbumImage" src="${image}" onclick="openDialog(${i})">`;
+        currentImageNumber.innerHTML = `${currentIndex+1} / ${images.length}`
+   }
 }
-
+  
 
 
 let currentIndex = 0;
 function openDialog(index) {
-    currentIndex = 0;
-
+    
+    currentIndex = index;
     const dialog = document.getElementById("dialogAlbum");
     const dialogImage = document.getElementById("dialogImage");
-
-    dialogImage.src = images[index];
+    dialogImage.src = images[currentIndex];
     dialog.showModal();
 }
+
 function closeDialog() {
     document.getElementById("dialogAlbum").close();
 }
-function rendDialog(index) {
 
-
+function showNextImage() {
+    currentIndex = (currentIndex +1)% images.length;
+    dialogImage.src = images[currentIndex];
+    updateDialogImage()
 }
+
+function showPrevImage() {
+    currentIndex = (currentIndex -1 + images.length)% images.length;
+    dialogImage.src = images[currentIndex];
+    updateDialogImage()
+}
+/* this function shows the number of the photo in the dialog */
+function updateDialogImage() {
+    const dialogImage = document.getElementById("dialogImage");
+    const counter = document.getElementById("currentImageNumber");
+
+    dialogImage.src = images[currentIndex];
+    counter.innerHTML = `${currentIndex + 1} / ${images.length}`;
+}
+
 
 
 
