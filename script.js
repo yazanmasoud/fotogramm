@@ -57,7 +57,7 @@ function updateDialogImage() {
 
 function updateDialogTitel() {
     const IMAGEPATH = IMAGES[currentIndex];
-    const FILENAME = IMAGEPATH.split("/").pop();
+    const FILENAME = IMAGEPATH.split("/").pop(); /* this return the last index from the array we splited */
     const TITLE = FILENAME.split(".")[0]; /* this is to switch the string to array and gives the first element back */
     const DIALOGTITLE = document.getElementById('dialogTitel');
     DIALOGTITLE.innerText = TITLE;
