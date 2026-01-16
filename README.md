@@ -8,8 +8,6 @@ The goal of this project is to gradually transform a simple photo gallery into a
 ## 🚀 Features (current / planned)
 
 - 📷 Photo gallery
-- ❤️ Like system
-- 💬 Comments
 - 👤 User profiles (planned)
 - 📱 Responsive design
 - ⚡ Interactive UI with JavaScript
